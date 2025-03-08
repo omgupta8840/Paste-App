@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
@@ -22,12 +23,16 @@ function Viewpaste() {
   }, [pasteId, allpastes]);
 
   return (
-    <div className="min-h-screen bg-grey-100 flex flex-col items-center p-6">
+    <div className="min-h-screen bg-gray-200 flex flex-col items-center p-6">
+      {/* Paste Content Card */}
       <div className="w-full max-w-3xl bg-white shadow-md rounded-lg p-6">
-        
+        {/* Paste Title */}
         <h1 className="text-3xl font-bold text-gray-800 mb-4">
-        {title || "Paste Title"}</h1>
-        <p className="text-gray-600 text-lg whitespace-pre-wrap border-t pt-4">
+          {title || "Paste Title"}
+        </h1>
+
+        {/* Paste Content */}
+        <p className="text-gray-600 text-lg whitespace-pre-wrap border-t border-gray-300 pt-4">
           {value || "Paste content goes here..."}
         </p>
       </div>
